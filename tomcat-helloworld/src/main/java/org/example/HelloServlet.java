@@ -12,6 +12,6 @@ public class HelloServlet extends HttpServlet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
     throws ServletException, IOException
     {
-        resp.getWriter().print("Hello world 666");
+        resp.getWriter().print("Hello world 777");
     }
 }
