@@ -59,6 +59,13 @@
     <dependencyManagement>
     </dependencyManagement>
 
+    <repositories>
+      <repository>
+        <id>oracle</id>
+        <name>ORACLE JDBC Repository</name>
+        <url>https://packages.atlassian.com/maven-external/</url>
+      </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
@@ -73,8 +80,8 @@
         </dependency>
         <dependency>
            <groupId>com.oracle</groupId>
-           <artifactId>ojdbc14</artifactId>
-           <version>10.2.0.3.0</version>
+           <artifactId>ojdbc6</artifactId>
+           <version>12.1.0.1-atlassian-hosted</version>
         </dependency>
     </dependencies>
 
