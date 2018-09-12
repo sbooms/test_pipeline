@@ -29,10 +29,10 @@ public class JdbcTodoListDAO implements TodoListDAO {
         try {
             Context initialContext = new InitialContext();
             try {
-                return (DataSource) initialContext.lookup(System.getenv("DB_ORACLE"));
+                return (DataSource) initialContext.lookup(System.getenv("ORACLE_RESOURCE_NAME"));
             } catch (NameNotFoundException e) {
                 Context envContext = (Context) initialContext.lookup("java:comp/env");  // Tomcat places datasources inside java:comp/env
-                return (DataSource) envContext.lookup(System.getenv("DB_ORACLE"));
+                return (DataSource) envContext.lookup(System.getenv("ORACLE_RESOURCE_NAME"));
             }
         } catch (NamingException e) {
             throw new DataAccessException("Could not look up datasource", e);
