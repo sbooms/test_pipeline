@@ -47,7 +47,7 @@ public class JdbcTodoListDAO implements TodoListDAO {
                     connection.setAutoCommit(true);
                     Statement statement = connection.createStatement();
                     try {
-                        statement.executeUpdate("CREATE TABLE todo_entries (id bigint, summary VARCHAR(255), description TEXT)");
+                        statement.executeUpdate("CREATE TABLE todo_entries (id int, summary VARCHAR(255), description VARCHAR(255))");
                     } finally {
                         statement.close();
                     }
