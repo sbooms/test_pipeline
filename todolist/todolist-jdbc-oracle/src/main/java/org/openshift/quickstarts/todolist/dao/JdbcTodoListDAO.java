@@ -56,7 +56,7 @@ public class JdbcTodoListDAO implements TodoListDAO {
                 connection.close();
             }
         } catch (SQLException e) {
-            throw new DataAccessException("could not initialize database schema", e);
+	    connection.close();
         }
     }
 
