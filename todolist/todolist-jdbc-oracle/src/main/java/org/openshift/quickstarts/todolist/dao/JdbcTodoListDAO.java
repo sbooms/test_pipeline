@@ -56,7 +56,6 @@ public class JdbcTodoListDAO implements TodoListDAO {
                 connection.close();
             }
         } catch (SQLException e) {
-	    connection.close();
         }
     }
 
